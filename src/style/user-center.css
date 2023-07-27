@@ -1,0 +1,68 @@
+#user_center .user_center_title {
+    margin: 5px;
+    margin-left: 7px;
+    color: rgb(92, 91, 91);
+}
+
+#user_center .user_operation {
+    background-color: #fff;
+}
+
+
+/* 修改label 标签文字的大小 */
+
+
+/* 这种是在这个组件里面修改那个组件内部某个样式的方式，用>>> */
+
+#user_center>>>.el-tabs__item {
+    font-size: 16px;
+}
+
+.user-center-phone>>>.el-drawer.ltr {
+    width: 60%!important;
+    font-size: 2em;
+}
+
+.el-menu-item {
+    font-size: 18px;
+}
+
+.uc-header {
+    padding: 10px;
+    background-color: #409EFF;
+    color: #fff;
+    font-size: 20px;
+}
+
+.button {
+    color: #fff;
+    /* background-color: #4CAF50; */
+    background-color: #409EFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* 让文字和图标水平线对齐 */
+
+.uc-header span {
+    vertical-align: middle;
+}
+
+.el-row {
+    display: none;
+}
+
+
+/* 电脑模式 */
+
+@media only screen and (min-width: 768px) {
+    /* 这里el-row在电脑模式下使用了flex布局，所以要恢复为flex，不能设置为block */
+    .el-row {
+        display: flex;
+    }
+    .user-center-phone {
+        display: none;
+    }
+}

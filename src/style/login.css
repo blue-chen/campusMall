@@ -1,0 +1,52 @@
+#login_part .header_title {
+    text-align: center;
+    color: rgb(223, 17, 17);
+}
+
+
+/* 因为h1是块元素，是占满一行的，当标题字数少时显示在左边，用 text-align 就可以让h1 的内容水平居中了，text-align 永远是设置
+      元素（如h1）的内容（文字）水平居中的，不是自己设置自己居中*/
+
+.login_main {
+    height: 700px;
+    background-image: url("../assets/Retail-Management-2.jpg");
+    /* 防止 el-card的上margin穿透 */
+    overflow: hidden;
+    /* 背景图片默认是重复的，在背景图宽度小于元素宽度时触发 */
+    /* background-repeat: no-repeat; */
+    /* 背景图片的宽度较小时，bg-size取值用两个100%，会强制拉伸图片铺满元素 */
+    /* background-size: 100% 100%; */
+    background-size: contain;
+}
+
+.box-card {
+    width: 90%;
+    margin: auto;
+}
+
+.el-card {
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.loginTitle {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    color: #606266;
+    /* margin-top: 16px; */
+    /* line-height: center; */
+    height: 50px;
+    line-height: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .login_main {
+        height: 580px;
+    }
+    .box-card {
+        width: 30%;
+    }
+}

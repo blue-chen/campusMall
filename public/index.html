@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            /* background-color: #f9fafc; */
+            background-color: #eeeeee;
+            overflow-y: scroll;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            /* 设置下拉选项框的宽度，因为下拉选项框是用绝对定位生成的，dom结构中是body的子元素，所以在这里根html中
+        写下拉选项框的样式 */
+            .el-select-dropdown {
+                min-width: unset !important;
+                width: 38%;
+                border: 1px solid orange !important;
+            }
+            /* 设置下拉选项的文字居中 */
+            .el-select-dropdown__item {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

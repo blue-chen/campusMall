@@ -1,0 +1,67 @@
+<template>
+  <div>
+    <!-- 表单元素可以设置它的margin，来和它的容器保持距离。当容器什么样式都没有设置时，就相当于
+  在子元素外面包了一圈细线，细线里面就是父元素的内容 -->
+    <el-form :inline="true" :model="formInline" class="demo-form-inline">
+      <el-form-item label="新的用户名：">
+        <el-input v-model="formInline.user"></el-input>
+      </el-form-item>
+
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">修改</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      formInline: {
+        user: "",
+        region: "",
+      },
+    };
+  },
+   beforeCreate() {
+    console.log('修改用户名子组件的beforeCreate 钩子');
+    
+  },
+   created() {
+    console.log('修改用户名子组件的created 钩子');
+  },
+  beforeMount() {
+    console.log('修改用户名子组件的beforeMount 钩子');
+    
+  },
+  mounted() {
+    console.log('修改用户名子组件的mounted 钩子');
+    
+  },
+  methods: {
+    onSubmit() {
+      console.log("submit!");
+      // this.$message({
+      //   message: "恭喜你，这是一条成功消息",
+      //   type: "success",
+      // });
+
+          this.$message.success('修改成功！');
+    },
+  },
+};
+</script>
+
+<style scoped>
+.demo-form-inline {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* 手机样式 */
+@media only screen and (max-width: 768px) {
+  .el-button{
+    margin-left: 95px;
+  }
+}
+</style>

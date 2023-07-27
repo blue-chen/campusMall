@@ -1,0 +1,57 @@
+/* 让表单距离顶部有间距 */
+
+.ruleForm {
+    margin-top: 30px;
+    /* padding-right: 30px; */
+}
+
+
+/* 让物品详情输入框和视口右边有间距 */
+
+.goods-text>>>.el-form-item__content {
+    margin-right: 30px;
+}
+
+
+/* 让联系方式输入框和视口右边有间距 */
+
+.contact_item {
+    margin-right: 30px;
+}
+
+
+/* 设置联系方式输入框的宽度 */
+
+.contact_item .el-input {
+    width: 47%;
+}
+
+
+/* 设置物品售价输入框的宽度 */
+
+.goods_price_item {
+    width: 30%;
+}
+
+
+/* 手机模式 */
+
+@media only screen and (max-width: 768px) {
+    /* 设置物品类别选项框的宽度 */
+    .goods-select>>>.el-input {
+        width: 70%;
+    }
+    /* 设置物品类别选项框里的文字居中 */
+    .goods-select>>>.el-input__inner {
+        text-align: center;
+    }
+    /* elementUI 的组件可以用width：百分数设置宽度 */
+    /* 设置联系方式输入框的宽度 */
+    .contact_item .el-input {
+        width: 100%;
+    }
+    /* 设置物品售价输入框的宽度 */
+    .goods_price_item {
+        width: 45%;
+    }
+}

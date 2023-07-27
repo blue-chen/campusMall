@@ -1,0 +1,209 @@
+.title {
+    text-align: center;
+    color: rgb(92, 91, 91);
+}
+
+
+/* 搜索框的容器 */
+
+.input-button-container1 {
+    width: 80%;
+    margin: auto;
+}
+
+.input-button-container2 {
+    padding: 10px 0;
+    /* background-color: #f9fafc; */
+    /* background-color: #eeeeee; */
+    /* border: 1px solid red; */
+    /* 容器的元素都浮动后需要清除浮动 */
+    overflow: hidden;
+}
+
+.col-9 {
+    border: 1px solid orange;
+}
+
+#search_item .search_input {
+    float: left;
+    width: 80%;
+    /* width: 500px; */
+    /* margin-top: 20px; */
+}
+
+#search_item .search_btn {
+    float: left;
+    width: 20%;
+    /* margin-top: 20px; */
+    /* margin-left: 10px; */
+}
+
+#search_item .hot_key {
+    margin-bottom: 5px;
+}
+
+#search_item .hot_key a {
+    text-decoration: none;
+    /* color: black; */
+    margin-right: 5px;
+    color: rgb(68, 68, 68);
+}
+
+
+/* 导航栏背景色 */
+
+#navigation-bg {
+    background-color: #409EFF;
+}
+
+
+/* 用来放导航栏的链接，li元素在一行上 */
+
+#search_item #navigation_Ul li {
+    display: inline-block;
+}
+
+#search_item .navigation_row span {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navigation_row .router-link-active {
+    text-decoration: none;
+    color: white;
+}
+
+.navigation_row .router-link-active:hover {
+    color: rgb(168, 11, 11);
+}
+
+.navigation_row {
+    color: white;
+}
+
+.login_part {
+    margin-top: 15px;
+}
+
+
+/* 因为 router-link 会转化成a标签，所以对 router-link 应用的样式还要再对a标签应用一遍 ，这样才能使router-link变化前后的样式一样*/
+
+#navigation-bg a {
+    text-decoration: none;
+    color: white;
+}
+
+#navigation-bg a:hover {
+    color: rgb(168, 11, 11);
+}
+
+.log_out {
+    margin-left: 20px;
+}
+
+.el-dropdown-link {
+    cursor: pointer;
+    color: white;
+}
+
+.el-icon-arrow-down {
+    font-size: 19px;
+}
+
+.link-container {
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: #409EFF;
+}
+
+
+/* flex 布局让3个链接有间隔地并列 */
+
+.link-for-phone {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link-container .router-link-active {
+    text-decoration: none;
+    color: white;
+}
+
+.person-center {
+    text-decoration: none;
+    color: white;
+}
+
+.goods_type {
+    width: 80%;
+    /* 设置h2 的上下margin是5px，auto是水平居中，所以h2是水平居中的，但文字默认是左对齐，
+     h2没有设置text-align：center,所以文字没有水平居中 */
+    margin: 5px auto;
+    padding-left: 15px;
+    color: rgb(92, 91, 91);
+}
+
+
+/* 默认移动优先，隐藏用于电脑的html元素 */
+
+.navigation_row {
+    display: none;
+}
+
+
+/* For desktop: */
+
+
+/* 电脑模式下显示用于在电脑上浏览的元素 */
+
+@media only screen and (min-width: 768px) {
+    .navigation_row {
+        display: block;
+    }
+    /* 电脑模式下用于在手机上显示的元素消失 */
+    .link-container {
+        display: none;
+    }
+    /* 电脑模式下搜索框、按钮的容器宽度去40%比较合适，不会太宽 */
+    .input-button-container1 {
+        width: 40%;
+    }
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+/* detail组件里用了公共的navigation组件，但在显示这个组件的时候想隐藏公共组件的分类标题 */
+
+
+/* 导航栏组件在商品详情组件中作为子组件，那么在商品详情组件中可以控制导航栏组件的样式，
+这里就隐藏公共组件的分类标题 */
+
+#gooods_detail>>>.goods_type_div {
+    display: none;
+}
+
+
+/* 容器居中 */
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+#gooods_detail .goods_detial_title {
+    margin: 5px 0;
+    color: rgb(92, 91, 91);
+}
+
+.goodsImg_div img {
+    height: 100%;
+    /* div 的宽度width是用来放img元素的，所以img的width最大可以占满父元素width的100% 。div的width是要放东西的，放什么呢，就是放img元素*/
+    width: 100%;
+}
+
+
+/* 卡片内右边部分 */
+
+
+/* 电脑模式下右边的容器变成bfc，这是采用左边float+右边bfc的方式来创造两列布局，
+一行中左边已经设置宽度，右边bfc会自动占据一行剩下的宽度 */
+
+.goods_desc {
+    overflow: hidden;
+    /* color: rgb(131, 130, 130); */
+    /* color: rgb(114, 113, 113); */
+    color: rgb(92, 91, 91);
+    font-size: 19px;
+}
+
+
+/* 物品详情和右边对应的文字也是使用了 左边float+右边bfc来产生两列布局 */
+
+.span1_3 {
+    float: left;
+    font-weight: bold;
+}
+
+.goods_desc>div {
+    overflow: hidden;
+    /* 让3个div产生下边距来生成间隔 */
+    margin-bottom: 20px;
+}
+
+.span2 {
+    float: left;
+    margin-left: 38px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.rmb_sign,
+.goods_price {
+    color: rgb(177, 6, 6);
+}
+
+.rmb_sign {
+    font-size: 17px;
+}
+
+.goods_price {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+    /* 这是卡片的样式 */
+    /* 设置左边装有图片的容器浮动，从而让图片排列在左边 */
+    .goodsImg_div {
+        height: 300px;
+        width: 48%;
+        float: left;
+        margin-right: 20px;
+        /* 在自己的内容区域四周增加内边距，它的内容是img，也就是在img的四周增加空白 ，
+    因为div 的 width 固定了，再增加就会使div的实际宽度更大*/
+        padding: 10px 10px 10px 10px;
+        /* border:1px solid #BFBFBF; */
+        border: 1px solid rgb(228, 227, 227);
+        box-shadow: 2px 2px 3px #aaaaaa;
+        /* box-shadow:-2px -2px 3px #aaaaaa, 2px 2px 3px #aaaaaa; */
+        margin-bottom: 5px;
+    }
+    /* 容器变成bfc，让图片的容器浮动后依然撑起卡片的高度 */
+    .img_desc_div {
+        overflow: hidden;
+    }
+}
